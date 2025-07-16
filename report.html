@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Report</title>
+</head>
+<body>
+    <h1>Video Report</h1>
+    <a href="/download_csv">Download CSV Report</a>
+    <table border="1">
+        <tr>
+            <th>File Name</th>
+            <th>Links</th>
+        </tr>
+        {% for video in video_data %}
+        <tr>
+            <td>{{ video.name }}</td>
+            <td><a href="{{ video.link }}" target="_blank">{{ video.link }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
